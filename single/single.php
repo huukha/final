@@ -107,9 +107,9 @@
 
 			while($row = mysqli_fetch_assoc($data)){
 			echo "<div class='grid-item item animate-box' data-animate-effect='fadeIn'>";
-		  	echo "	<a href='".$row['link']."' class='image-popup' title='".$row['description']."'>";
+		  	echo "	<a href='../".$row['link']."' class='image-popup' title='".$row['description']."'>";
 			echo "		<div class='img-wrap'>";
-			echo "			<img src='".$row['link']."' alt='' class='img-responsive'>";
+			echo "			<img src='../".$row['link']."' alt='' class='img-responsive'>";
 			echo "		</div>";
 			echo "		<div class='text-wrap'>";
 			echo "			<div class='text-inner popup'>";
