@@ -24,7 +24,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         move_uploaded_file($_FILES["fileToUpload3"]["tmp_name"], $target_file3);
         ////////////////////////////////////////////////////////////
 
-        $sql = "INSERT INTO album(userID, title, description, thumbnail, dates) VALUES(2,'dd','d','images/haidang.jpg','a')";
+        $sql = "INSERT INTO album(title, description, thumbnail,dates) VALUES('".$title."','".$des."','".$target_file."','".$date."')";
         $result = mysqli_query($conn, $sql);
 
         if ($result === TRUE) {
