@@ -43,7 +43,7 @@
       $count= mysqli_num_rows($data1);
       echo"<div class='timeline-item' data-text='".$row['description']."'>";
       echo"<div class='timeline__content'><a href='single/single.php?id=".$row['id']."'><img class='timeline__img' src='".$row['thumbnail']."'/></a>";
-      echo"  <h2 class='timeline__content-title'>".$row['date']."</h2>";
+      echo"  <h2 class='timeline__content-title'>".$row['dates']."</h2>";
       echo"  <p class='timeline__content-desc'>".$row['title']."</p>";
       echo"</div>";
     echo"</div>";
@@ -73,6 +73,11 @@
               <div class="form-group">
                 <label for="code">Description</label>
                 <input type="text" class="form-control" name="product_code" id="code">
+              </div>
+
+              <div class="form-group">
+                <label for="code">Date</label>
+                <input type="text" class="form-control" name="date" id="code">
               </div>
 
 
