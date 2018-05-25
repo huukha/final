@@ -8,6 +8,7 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
         
         $title = $_POST["product_name"];
         $des = $_POST["product_code"];
+        $date = $_POST["date"];
         ///////////////////////////////////////////////////////////////////////
        
         $target_dir = "images/";
@@ -16,14 +17,14 @@ if($_SERVER["REQUEST_METHOD"] == "POST"){
 
         $target_dir = "images/";
         $target_file2 = $target_dir .date("YmdHis"). basename($_FILES["fileToUpload2"]["name"]);
-        move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file2);
+        move_uploaded_file($_FILES["fileToUpload2"]["tmp_name"], $target_file2);
 
         $target_dir = "images/";
         $target_file3 = $target_dir .date("YmdHis"). basename($_FILES["fileToUpload3"]["name"]);
-        move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file3);
+        move_uploaded_file($_FILES["fileToUpload3"]["tmp_name"], $target_file3);
         ////////////////////////////////////////////////////////////
 
-        $sql = "INSERT INTO album(title, description, thumbnail) VALUES('".$title."','".$des."','".$target_file."')";
+        $sql = "INSERT INTO album(userID, title, description, thumbnail, dates) VALUES(2,'dd','d','images/haidang.jpg','a')";
         $result = mysqli_query($conn, $sql);
 
         if ($result === TRUE) {
